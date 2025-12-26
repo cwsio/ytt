@@ -11,20 +11,17 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c1420] via-[#0c1420]/70 to-[#0c1420]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2d5016] via-[#3d6b1e]/60 to-[#c9a227]/30" />
         <div className="max-w-7xl mx-auto px-8 md:px-16 w-full relative z-10">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <p className="text-[#c9a227] tracking-[0.3em] text-xs md:text-sm uppercase mb-8 md:mb-12">
-              Since 1985
-            </p>
-            <h1 className="text-white text-5xl md:text-7xl lg:text-[6.5rem] font-serif leading-[0.95] max-w-4xl mb-10 md:mb-14">
+            <h1 className="text-white text-5xl md:text-7xl lg:text-[6.5rem] font-serif leading-[0.95] max-w-4xl mb-10 md:mb-14 drop-shadow-lg">
               Yeshiva Tiferes Torah
             </h1>
-            <p className="text-white/70 text-lg md:text-xl font-light max-w-md leading-relaxed">
+            <p className="text-white/90 text-lg md:text-xl font-light max-w-md leading-relaxed drop-shadow-md">
               Every child matters.<br />
               Every child can grow.
             </p>
@@ -66,7 +63,6 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-16 md:gap-24">
             <div className="md:col-span-5">
               <div className="md:sticky md:top-32">
-                <p className="text-[#c9a227] tracking-[0.25em] text-xs uppercase mb-6">About Us</p>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0c1420] leading-[1.1]">
                   Chinuch that<br />feels personal.
                 </h2>
@@ -95,7 +91,6 @@ export default function Home() {
       {/* Video Section */}
       <section className="py-24 md:py-32 bg-[#f8f7f4]">
         <div className="max-w-5xl mx-auto px-8 md:px-16">
-          <p className="text-[#c9a227] tracking-[0.25em] text-xs uppercase mb-8 text-center">See Our Yeshiva</p>
           <div className="aspect-video w-full">
             <iframe
               className="w-full h-full rounded-md"
@@ -112,8 +107,6 @@ export default function Home() {
       {/* Philosophy Section - Dark band with large quote */}
       <section id="philosophy" className="py-32 md:py-48 bg-[#0c1420]">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <p className="text-[#c9a227] tracking-[0.25em] text-xs uppercase mb-16 md:mb-24">Our Philosophy</p>
-          
           <blockquote className="text-white text-3xl md:text-5xl lg:text-6xl font-serif leading-[1.15] max-w-5xl mb-20 md:mb-32">
             "YTT exists to educate the Ribono Shel Olam's children with responsibility, care, and clarity."
           </blockquote>
@@ -141,8 +134,6 @@ export default function Home() {
       {/* Numbers Section - Large numerals, minimal */}
       <section id="numbers" className="py-32 md:py-48 bg-[#f8f7f4]">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <p className="text-[#c9a227] tracking-[0.25em] text-xs uppercase mb-20 md:mb-32">By The Numbers</p>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 md:gap-y-0">
             <div className="md:border-r md:border-[#0c1420]/10 md:pr-12">
               <p className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#0c1420] leading-none mb-4">40</p>
@@ -169,7 +160,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           <div className="grid md:grid-cols-2 gap-16 md:gap-24">
             <div>
-              <p className="text-[#c9a227] tracking-[0.25em] text-xs uppercase mb-6">Contact Us</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0c1420] leading-[1.1] mb-8">
                 Get in touch
               </h2>
