@@ -4,21 +4,6 @@ import fundraiserBanner from "@assets/image_1766773408225.png";
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Fundraiser Banner */}
-      <a 
-        href="https://www.rayze.it/ytt/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="block w-full"
-        data-testid="link-fundraiser-banner"
-      >
-        <img 
-          src={fundraiserBanner} 
-          alt="40 Years of Learning Torah Geshmak - YTT Fundraiser" 
-          className="w-full h-auto"
-        />
-      </a>
-
       {/* Hero Section - Full height, left-aligned, editorial */}
       <section className="min-h-screen flex flex-col justify-end pb-24 md:pb-32 pt-32 bg-[#0c1420]">
         <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
@@ -38,6 +23,34 @@ export default function Home() {
               Every child can grow.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Fundraiser Banner */}
+      <section className="py-16 md:py-24 bg-[#f8f7f4]">
+        <div className="max-w-5xl mx-auto px-8 md:px-16">
+          <a 
+            href="https://www.rayze.it/ytt/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block relative group overflow-hidden rounded-md"
+            data-testid="link-fundraiser-banner"
+          >
+            <img 
+              src={fundraiserBanner} 
+              alt="40 Years of Learning Torah Geshmak - YTT Fundraiser" 
+              className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+            <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8">
+              <span className="inline-flex items-center gap-2 bg-[#c9a227] text-[#0c1420] px-5 py-3 text-sm font-medium uppercase tracking-wider rounded-sm shadow-lg group-hover:bg-[#d4af37] transition-colors">
+                Support Our Campaign
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </span>
+            </div>
+          </a>
         </div>
       </section>
 
