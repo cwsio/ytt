@@ -7,12 +7,14 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import Legal from "@/pages/Legal";
+import ParentResources from "@/pages/ParentResources";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/parent-resources" component={ParentResources} />
       <Route path="/legal/:slug" component={Legal} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />

@@ -17,7 +17,7 @@ export function Navbar() {
 
   const navLinks = [
     { name: "About", href: "/#about" },
-    { name: "Philosophy", href: "/#philosophy" },
+    { name: "Parent Resources", href: "/parent-resources" },
     { name: "Contact", href: "/#contact" },
   ];
 
