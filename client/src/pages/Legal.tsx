@@ -1,5 +1,4 @@
-import { Section } from "@/components/Section";
-import { useRoute } from "wouter";
+import { useRoute, Link } from "wouter";
 
 const policies = {
   nondiscrimination: {
@@ -21,29 +20,39 @@ export default function Legal() {
   
   if (!match || !params || !Object.keys(policies).includes(params.slug)) {
     return (
-      <Section className="min-h-[60vh] flex items-center justify-center">
+      <div className="min-h-[70vh] flex items-center justify-center px-8">
         <div className="text-center">
-          <h1 className="text-3xl font-serif text-navy mb-4">Page Not Found</h1>
-          <p className="text-muted-foreground">The requested policy page could not be found.</p>
+          <h1 className="text-3xl font-serif text-[#0c1420] mb-4">Page Not Found</h1>
+          <p className="text-[#4a5568] mb-8">The requested policy page could not be found.</p>
+          <Link href="/" className="text-[#c9a227] text-sm uppercase tracking-[0.15em] hover:underline">
+            Return Home
+          </Link>
         </div>
-      </Section>
+      </div>
     );
   }
 
   const policy = policies[params.slug as keyof typeof policies];
 
   return (
-    <div className="min-h-screen pt-24 pb-12">
-      <Section className="max-w-4xl mx-auto py-12">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-navy mb-8 border-b border-border pb-6">
+    <div className="min-h-screen pt-32 pb-24 bg-white">
+      <div className="max-w-3xl mx-auto px-8 md:px-16">
+        <Link 
+          href="/" 
+          className="text-[#c9a227] text-xs uppercase tracking-[0.2em] mb-8 inline-block hover:underline"
+          data-testid="link-back-home"
+        >
+          Back to Home
+        </Link>
+        
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#0c1420] mb-12 leading-tight">
           {policy.title}
         </h1>
-        <div className="prose prose-lg prose-slate max-w-none">
-          <p className="leading-relaxed text-muted-foreground">
-            {policy.content}
-          </p>
+        
+        <div className="text-lg text-[#4a5568] leading-relaxed">
+          <p>{policy.content}</p>
         </div>
-      </Section>
+      </div>
     </div>
   );
 }
