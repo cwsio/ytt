@@ -89,16 +89,16 @@ export default function Home() {
       {/* Numbers Section - Compact */}
       <section id="numbers" className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0">
-            <div className="md:border-r md:border-[#0c1420]/10 md:pr-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 md:gap-x-0 md:gap-y-0">
+            <div className="md:border-r md:border-[#0c1420]/10 md:pr-8 pr-4">
               <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">40</p>
-              <p className="text-xs text-[#4a5568] tracking-wide">Years of making every child matter</p>
+              <p className="text-xs text-[#4a5568] tracking-wide">Years of chinuch</p>
             </div>
             <div className="md:border-r md:border-[#0c1420]/10 md:px-8">
               <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">21</p>
               <p className="text-xs text-[#4a5568] tracking-wide">Talmidim in 1985</p>
             </div>
-            <div className="md:border-r md:border-[#0c1420]/10 md:px-8">
+            <div className="md:border-r md:border-[#0c1420]/10 md:px-8 pr-4">
               <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">443</p>
               <p className="text-xs text-[#4a5568] tracking-wide">Talmidim in 2025</p>
             </div>
