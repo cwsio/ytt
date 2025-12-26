@@ -4,12 +4,8 @@ const resources = [
   {
     title: "Snow Hotline",
     description: "Check for weather-related closings and delays",
-    content: "Call for updates",
-  },
-  {
-    title: "Application Form",
-    description: "Apply for enrollment at YTT",
-    content: "Coming soon",
+    content: "(732) 595-1050",
+    link: "tel:7325951050",
   },
   {
     title: "School Calendar",
@@ -17,9 +13,11 @@ const resources = [
     content: "Coming soon",
   },
   {
-    title: "Tuition & Payments",
-    description: "Payment portal and tuition information",
-    content: "Coming soon",
+    title: "Donate",
+    description: "Support YTT and our mission",
+    content: "Give Now",
+    link: "https://www.rayze.it/ytt/",
+    external: true,
   },
 ];
 
@@ -52,9 +50,20 @@ export default function ParentResources() {
                 <p className="text-sm text-[#4a5568] mb-4">
                   {resource.description}
                 </p>
-                <p className="text-[#c9a227] text-sm font-medium">
-                  {resource.content}
-                </p>
+                {resource.link ? (
+                  <a 
+                    href={resource.link}
+                    target={resource.external ? "_blank" : undefined}
+                    rel={resource.external ? "noopener noreferrer" : undefined}
+                    className="text-[#c9a227] text-sm font-medium hover:underline"
+                  >
+                    {resource.content}
+                  </a>
+                ) : (
+                  <p className="text-[#c9a227] text-sm font-medium">
+                    {resource.content}
+                  </p>
+                )}
               </motion.div>
             ))}
           </div>

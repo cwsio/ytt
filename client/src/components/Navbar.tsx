@@ -7,6 +7,8 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
 
+  const isHomePage = location === "/";
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -14,6 +16,8 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const showSolidNav = scrolled || isOpen || !isHomePage;
 
   const navLinks = [
     { name: "About", href: "/#about" },
@@ -25,7 +29,7 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled || isOpen 
+        showSolidNav 
           ? "bg-white py-5" 
           : "bg-transparent py-8"
       )}
@@ -35,7 +39,7 @@ export function Navbar() {
           href="/" 
           className={cn(
             "font-serif text-lg md:text-xl tracking-tight transition-colors duration-300",
-            scrolled || isOpen ? "text-[#0c1420]" : "text-white"
+            showSolidNav ? "text-[#0c1420]" : "text-white"
           )}
         >
           YTT
@@ -49,7 +53,7 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "text-xs uppercase tracking-[0.2em] transition-colors duration-300",
-                scrolled 
+                showSolidNav 
                   ? "text-[#4a5568] hover:text-[#0c1420]" 
                   : "text-white/70 hover:text-white"
               )}
@@ -68,17 +72,17 @@ export function Navbar() {
         >
           <span className={cn(
             "w-full h-[1px] transition-all duration-300 origin-left",
-            scrolled || isOpen ? "bg-[#0c1420]" : "bg-white",
+            showSolidNav ? "bg-[#0c1420]" : "bg-white",
             isOpen && "rotate-45 translate-y-[1px]"
           )} />
           <span className={cn(
             "w-full h-[1px] transition-all duration-300",
-            scrolled || isOpen ? "bg-[#0c1420]" : "bg-white",
+            showSolidNav ? "bg-[#0c1420]" : "bg-white",
             isOpen && "opacity-0"
           )} />
           <span className={cn(
             "w-full h-[1px] transition-all duration-300 origin-left",
-            scrolled || isOpen ? "bg-[#0c1420]" : "bg-white",
+            showSolidNav ? "bg-[#0c1420]" : "bg-white",
             isOpen && "-rotate-45 -translate-y-[1px]"
           )} />
         </button>
