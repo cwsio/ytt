@@ -1,8 +1,24 @@
 import { motion } from "framer-motion";
+import fundraiserBanner from "@assets/image_1766773408225.png";
 
 export default function Home() {
   return (
     <div className="w-full">
+      {/* Fundraiser Banner */}
+      <a 
+        href="https://www.rayze.it/ytt/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block w-full"
+        data-testid="link-fundraiser-banner"
+      >
+        <img 
+          src={fundraiserBanner} 
+          alt="40 Years of Learning Torah Geshmak - YTT Fundraiser" 
+          className="w-full h-auto"
+        />
+      </a>
+
       {/* Hero Section - Full height, left-aligned, editorial */}
       <section className="min-h-screen flex flex-col justify-end pb-24 md:pb-32 pt-32 bg-[#0c1420]">
         <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
