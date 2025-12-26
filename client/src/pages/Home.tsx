@@ -1,16 +1,39 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import fundraiserBanner from "@assets/image_1766773408225.png";
-import heroBg from "@assets/YTTfrontMockup1_1766774086700.webp";
+import heroBg1 from "@assets/YTTfrontMockup1_1766774086700.webp";
+import heroBg2 from "@assets/YTTFront2_1766774522088.webp";
+
+const heroImages = [heroBg1, heroBg2];
 
 export default function Home() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full">
-      {/* Hero Section - Full height with background image */}
-      <section className="min-h-screen flex flex-col justify-end pb-24 md:pb-32 pt-32 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        />
+      {/* Hero Section - Full height with rotating background images */}
+      <section className="min-h-screen flex flex-col justify-end pb-24 md:pb-32 pt-32 relative overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImage}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1.08 }}
+            exit={{ opacity: 0 }}
+            transition={{ 
+              opacity: { duration: 1.5, ease: "easeInOut" },
+              scale: { duration: 6, ease: "linear" }
+            }}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-t from-[#2d5016] via-[#3d6b1e]/60 to-[#c9a227]/30" />
         <div className="max-w-7xl mx-auto px-8 md:px-16 w-full relative z-10">
           <motion.div
