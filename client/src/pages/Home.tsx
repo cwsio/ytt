@@ -76,8 +76,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Numbers Section - Compact */}
+      <section id="numbers" className="py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-8 md:px-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0">
+            <div className="md:border-r md:border-[#0c1420]/10 md:pr-8">
+              <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">40</p>
+              <p className="text-xs text-[#4a5568] tracking-wide">Years of making every child matter</p>
+            </div>
+            <div className="md:border-r md:border-[#0c1420]/10 md:px-8">
+              <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">21</p>
+              <p className="text-xs text-[#4a5568] tracking-wide">Talmidim in 1985</p>
+            </div>
+            <div className="md:border-r md:border-[#0c1420]/10 md:px-8">
+              <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">443</p>
+              <p className="text-xs text-[#4a5568] tracking-wide">Talmidim in 2025</p>
+            </div>
+            <div className="md:pl-8">
+              <p className="text-5xl md:text-6xl font-serif text-[#0c1420] leading-none mb-2">1,300</p>
+              <p className="text-xs text-[#4a5568] tracking-wide">Alumni</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section - Two column with sticky headline */}
-      <section id="about" className="py-32 md:py-48 bg-white">
+      <section id="about" className="py-32 md:py-48 bg-[#f8f7f4]">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           <div className="grid md:grid-cols-12 gap-16 md:gap-24">
             <div className="md:col-span-5">
@@ -145,30 +169,6 @@ export default function Home() {
               <p className="text-white/90 text-lg leading-relaxed">
                 Helping every boy uncover the greatness within him and develop into a productive ben Torah. The result is a yeshiva defined by simchas haTorah, real connection, and boys who truly love coming to yeshiva each morning.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Numbers Section - Large numerals, minimal */}
-      <section id="numbers" className="py-32 md:py-48 bg-[#f8f7f4]">
-        <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 md:gap-y-0">
-            <div className="md:border-r md:border-[#0c1420]/10 md:pr-12">
-              <p className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#0c1420] leading-none mb-4">40</p>
-              <p className="text-sm text-[#4a5568] tracking-wide">Years of making every child matter</p>
-            </div>
-            <div className="md:border-r md:border-[#0c1420]/10 md:px-12">
-              <p className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#0c1420] leading-none mb-4">21</p>
-              <p className="text-sm text-[#4a5568] tracking-wide">Talmidim in 1985</p>
-            </div>
-            <div className="md:border-r md:border-[#0c1420]/10 md:px-12">
-              <p className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#0c1420] leading-none mb-4">443</p>
-              <p className="text-sm text-[#4a5568] tracking-wide">Talmidim in 2025</p>
-            </div>
-            <div className="md:pl-12">
-              <p className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#0c1420] leading-none mb-4">1,300</p>
-              <p className="text-sm text-[#4a5568] tracking-wide">Alumni</p>
             </div>
           </div>
         </div>
