@@ -55,17 +55,27 @@ export default function Home() {
             href="https://www.rayze.it/ytt/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block relative group overflow-hidden rounded-md"
+            className="block group"
             data-testid="link-fundraiser-banner"
           >
-            <img 
-              src={fundraiserBanner} 
-              alt="40 Years of Learning Torah Geshmak - YTT Fundraiser" 
-              className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-            <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8">
-              <span className="inline-flex items-center gap-2 bg-[#c9a227] text-[#0c1420] px-5 py-3 text-sm font-medium uppercase tracking-wider rounded-sm shadow-lg group-hover:bg-[#d4af37] transition-colors">
+            <div className="relative overflow-hidden rounded-md">
+              <img 
+                src={fundraiserBanner} 
+                alt="40 Years of Learning Torah Geshmak - YTT Fundraiser" 
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+              <div className="hidden md:block absolute bottom-8 right-8">
+                <span className="inline-flex items-center gap-2 bg-[#c9a227] text-[#0c1420] px-5 py-3 text-sm font-medium uppercase tracking-wider rounded-sm shadow-lg group-hover:bg-[#d4af37] transition-colors">
+                  Support Our Campaign
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div className="md:hidden mt-4">
+              <span className="inline-flex items-center gap-2 bg-[#c9a227] text-[#0c1420] px-5 py-3 text-sm font-medium uppercase tracking-wider rounded-sm shadow-lg">
                 Support Our Campaign
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
