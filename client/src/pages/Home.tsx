@@ -35,19 +35,15 @@ export default function Home() {
           />
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-t from-[#2d5016] via-[#3d6b1e]/60 to-[#c9a227]/30" />
-        <div className="max-w-7xl mx-auto px-8 md:px-16 w-full relative z-10">
+        <div className="w-full relative z-10 px-8 md:px-16">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h1 className="text-white text-5xl md:text-7xl lg:text-[6.5rem] font-serif leading-[0.95] max-w-4xl mb-10 md:mb-14 drop-shadow-lg">
+            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-none drop-shadow-lg whitespace-nowrap">
               Yeshiva Tiferes Torah
             </h1>
-            <p className="text-white/90 text-lg md:text-xl font-light max-w-md leading-relaxed drop-shadow-md">
-              Every child matters.<br />
-              Every child can grow.
-            </p>
           </motion.div>
         </div>
       </section>
