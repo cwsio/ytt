@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* Fundraiser Banner */}
-      <section className="py-16 md:py-24 bg-[#f8f7f4]">
+      <section className="py-10 md:py-24 bg-[#f8f7f4]">
         <div className="max-w-5xl mx-auto px-8 md:px-16">
           <a 
             href="https://www.rayze.it/ytt/" 
@@ -111,9 +111,9 @@ export default function Home() {
       </section>
 
       {/* About Section - Two column with sticky headline */}
-      <section id="about" className="py-32 md:py-48 bg-[#f8f7f4]">
+      <section id="about" className="py-16 md:py-48 bg-[#f8f7f4]">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <div className="grid md:grid-cols-12 gap-16 md:gap-24">
+          <div className="grid md:grid-cols-12 gap-8 md:gap-24">
             <div className="md:col-span-5">
               <div className="md:sticky md:top-32">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0c1420] leading-[1.1]">
@@ -121,14 +121,14 @@ export default function Home() {
                 </h2>
               </div>
             </div>
-            <div className="md:col-span-7 space-y-8">
+            <div className="md:col-span-7 space-y-6 md:space-y-8">
               <p className="text-lg md:text-xl text-[#4a5568] leading-relaxed">
                 Yeshiva Tiferes Torah (YTT) is built on one guiding idea: every child matters, and every child can grow.
               </p>
               <p className="text-lg text-[#4a5568] leading-relaxed">
                 For 40 years, YTT has been a place where chinuch feels personal. You notice it right away. The warmth, the sincerity, the realness. It's not a slogan. It's the atmosphere. It's the way rebbeim speak to talmidim, the way boys are seen, and the way growth is celebrated.
               </p>
-              <div className="border-l-2 border-[#c9a227] pl-8 py-4 my-12">
+              <div className="border-l-2 border-[#c9a227] pl-6 md:pl-8 py-4 my-6 md:my-12">
                 <p className="text-2xl md:text-3xl font-serif italic text-[#0c1420] leading-snug">
                   A yeshiva that meets a boy where he is, and helps him become who he can be.
                 </p>
@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* Video Section */}
-      <section className="py-24 md:py-32 bg-[#f8f7f4]">
+      <section className="py-12 md:py-32 bg-[#f8f7f4]">
         <div className="max-w-5xl mx-auto px-8 md:px-16">
           <div className="aspect-video w-full">
             <iframe
@@ -158,13 +158,13 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section - Dark band with large quote */}
-      <section id="philosophy" className="py-32 md:py-48 bg-[#0c1420]">
+      <section id="philosophy" className="py-16 md:py-48 bg-[#0c1420]">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <blockquote className="text-white text-3xl md:text-5xl lg:text-6xl font-serif leading-[1.15] max-w-5xl mb-20 md:mb-32">
+          <blockquote className="text-white text-2xl md:text-5xl lg:text-6xl font-serif leading-[1.15] max-w-5xl mb-10 md:mb-32">
             "YTT exists to educate the Ribono Shel Olam's children with responsibility, care, and clarity."
           </blockquote>
           
-          <div className="grid md:grid-cols-3 gap-16 md:gap-24">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-24">
             <div>
               <p className="text-white/90 text-lg leading-relaxed">
                 We don't believe a talmid should have to squeeze into one mold. Our job is to understand the boy in front of us and give him the tools, support, and encouragement to move forward, step by step.
@@ -185,9 +185,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section - Split layout, typographic */}
-      <section id="contact" className="py-32 md:py-48 bg-white">
+      <section id="contact" className="py-16 md:py-48 bg-white">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <div className="grid md:grid-cols-2 gap-16 md:gap-24">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-24">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0c1420] leading-[1.1] mb-8">
                 Get in touch
@@ -196,7 +196,7 @@ export default function Home() {
                 We welcome you to reach out and connect with our office.
               </p>
             </div>
-            <div className="flex flex-col justify-center space-y-12">
+            <div className="flex flex-col justify-center space-y-8 md:space-y-12">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#4a5568] mb-3">Address</p>
                 <p className="text-2xl md:text-3xl font-serif text-[#0c1420]">
