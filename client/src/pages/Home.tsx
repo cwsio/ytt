@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
 import fundraiserBanner from "@assets/image_1766773408225.png";
+import heroBg from "@assets/YTTfrontMockup1_1766774086700.webp";
 
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section - Full height, left-aligned, editorial */}
-      <section className="min-h-screen flex flex-col justify-end pb-24 md:pb-32 pt-32 bg-[#0c1420]">
-        <div className="max-w-7xl mx-auto px-8 md:px-16 w-full">
+      {/* Hero Section - Full height with background image */}
+      <section className="min-h-screen flex flex-col justify-end pb-24 md:pb-32 pt-32 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c1420] via-[#0c1420]/70 to-[#0c1420]/40" />
+        <div className="max-w-7xl mx-auto px-8 md:px-16 w-full relative z-10">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -18,7 +24,7 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-7xl lg:text-[6.5rem] font-serif leading-[0.95] max-w-4xl mb-10 md:mb-14">
               Yeshiva Tiferes Torah
             </h1>
-            <p className="text-white/50 text-lg md:text-xl font-light max-w-md leading-relaxed">
+            <p className="text-white/70 text-lg md:text-xl font-light max-w-md leading-relaxed">
               Every child matters.<br />
               Every child can grow.
             </p>
@@ -82,6 +88,23 @@ export default function Home() {
                 What began in 1985 with 21 talmidim has, by 2025, grown to 443 talmidim and 1,300 alumni, all connected by the same foundation.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-24 md:py-32 bg-[#f8f7f4]">
+        <div className="max-w-5xl mx-auto px-8 md:px-16">
+          <p className="text-[#c9a227] tracking-[0.25em] text-xs uppercase mb-8 text-center">See Our Yeshiva</p>
+          <div className="aspect-video w-full">
+            <iframe
+              className="w-full h-full rounded-md"
+              src="https://www.youtube.com/embed/2i0cnNDUHTs"
+              title="Yeshiva Tiferes Torah Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              data-testid="video-ytt"
+            />
           </div>
         </div>
       </section>
